@@ -2,13 +2,14 @@
   <div class="col-md-6 m-auto">
     <div class="card card-body">
       <h1 class="text-center mb-3">
-        <i class="fas fa-user-plus"></i> Register
+        <i class="fas fa-user-plus"></i>
       </h1>
       <%- include ("./partials/messages"); %>
       <form action="/users/register" method="POST">
         <div class="form-group">
-          <label for="name">Name</label>
+          <label for="name" style="font-weight: 400">Name</label>
           <input
+            style="border: 1px solid black"
             type="name"
             id="name"
             name="name"
@@ -18,8 +19,9 @@
           />
         </div>
         <div class="form-group">
-          <label for="email">Email</label>
+          <label for="email" style="font-weight: 400">Email</label>
           <input
+            style="border: 1px solid black"
             type="email"
             id="email"
             name="email"
@@ -29,8 +31,9 @@
           />
         </div>
         <div class="form-group">
-          <label for="password">Password</label>
+          <label for="password" style="font-weight: 400">Password</label>
           <input
+            style="border: 1px solid black"
             type="password"
             id="password"
             name="password"
@@ -40,8 +43,11 @@
           />
         </div>
         <div class="form-group">
-          <label for="password2">Confirm Password</label>
+          <label for="password2" style="font-weight: 400"
+            >Confirm Password</label
+          >
           <input
+            style="border: 1px solid black"
             type="password"
             id="password2"
             name="password2"
@@ -50,11 +56,14 @@
             value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
           />
         </div>
-        <button type="submit" class="btn btn-primary btn-block">
+        <button type="submit" class="btn btn-success btn-block">
           Register
         </button>
       </form>
-      <p class="lead mt-4">Have An Account? <a href="/users/login">Login</a></p>
+      <p class="lead mt-4">
+        Have An Account?
+        <a style="font-weight: 800; color: blue" href="/users/login">Login</a>
+      </p>
     </div>
   </div>
 </div>
